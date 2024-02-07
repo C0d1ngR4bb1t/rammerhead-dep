@@ -54,7 +54,7 @@ module.exports = {
     disableLocalStorageSync: false,
 
     // restrict sessions to be only used per IP
-    restrictSessionToIP: true,
+    restrictSessionToIP: false,
 
     // use disk for caching js rewrites. set to null to use memory instead (not recommended for HDD disks)
     diskJsCachePath: path.join(__dirname, '../cache-js'),
@@ -87,7 +87,7 @@ module.exports = {
         cacheCheckInterval: 1000 * 60 * 10, // 10 minutes
         deleteUnused: true,
         staleCleanupOptions: {
-            staleTimeout: 1000 * 60 * 60 * 24 * 3, // 3 days
+            staleTimeout: 1000 * 60 * 60 * 24 * 7, // 7 days
             maxToLive: null,
             staleCheckInterval: 1000 * 60 * 60 * 6 // 6 hours
         },
